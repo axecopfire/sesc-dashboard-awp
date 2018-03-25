@@ -1,0 +1,159 @@
+body {
+  background-color: #4d4d4d;
+}
+header {
+  width: 100%;
+  display: block;
+  min-width: 320px;
+  position: relative;
+  z-index: 99;
+  top: 0;
+}
+p {
+  margin-bottom: 1rem;
+}
+a {
+  color: inherit;
+}
+.topHeader {
+  background-color: #002859;
+  width: 100%;
+}
+.logo img {
+  height: 100px;
+}
+.burger-icon {
+  right: 20px;
+  bottom: 50%;
+  transform: translateY(50%);
+  position: absolute;
+  display: inline-block;
+}
+.burger-icon span {
+  background-color: #fff;
+  width: 40px;
+  height: 3px;
+  margin: 10px;
+  border-radius: 10px;
+  display: block;
+}
+.sidebar {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 30%;
+  z-index: 100;
+  margin-left: -100%;
+  background-color: #b8b8b8;
+  transition: margin-left 0.5s ease;
+}
+.sidebar .sb-header {
+  width: 100%;
+  background-color: #002859;
+  display: block;
+}
+.sidebar img {
+  height: 100px;
+}
+.sidebar li {
+  list-style-type: none;
+  padding: 10px;
+}
+.sidebar li a {
+  color: #000;
+}
+.sidebar.active {
+  margin-left: 0;
+}
+.dimmer {
+  z-index: 0;
+}
+.dimmer.active {
+  z-index: 99;
+  position: fixed;
+  background-color: #002859;
+  opacity: 0.2;
+  width: 100vw;
+  height: 100vh;
+}
+/* Widgets */
+.bluf,
+.widget-contact {
+  background-color: #999;
+  color: #002859;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+.bluf h2,
+.widget-contact h2 {
+  font-weight: bold;
+  text-align: center;
+}
+.bluf p,
+.widget-contact p {
+  font-size: 24px;
+}
+.twitter-widget {
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  padding: 1px;
+  background: #949494;
+  border-radius: 5px;
+}
+.twitter-feed {
+  border: solid 2px #717171;
+}
+.tweetCont {
+  margin: 10px;
+  display: block;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+.tweetCont img {
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+@media (min-width: 1000px) {
+  .tweetCont img {
+    float: none;
+  }
+}
+.tweetCont p:first-child {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+}
+.tweetCont p:last-child {
+  padding: 5px;
+  display: inline-block;
+}
+.widget-employment {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #949494;
+  margin: 40px;
+}
+.widget-employment form input {
+  display: block;
+}
+.widget-employment img {
+  width: 100%;
+  border-radius: 5px;
+}
+.widget-contact {
+  background-color: #949494;
+  text-align: center;
+  padding: 20px;
+}
+.widget-colab img {
+  width: 100%;
+  margin: 20px;
+  border-radius: 5px;
+}

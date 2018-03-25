@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./skeleton.css">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="index.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Augusta Warrior Project Dashboard</title>
+</head>
+<body>
+    <header class="topHeader">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="container">
+                    <div class="row">
+                        <div class="six columns">
+                            <div class="logo">
+                                <a href="index.html" ><img src="./img/AWP.jpg" alt=""></a>       
+                            </div>
+                        </div>
+                        <div class="six columns">
+                            <div onClick="burger()" class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><a>Housing</a></li>
+                    <li><a href="./widget-employment.html">Employment</a></li>
+                    <li>Benefits and Healthcare</li>
+                    <li>Education</li>
+                    <li>Collaborative Services</li>
+                    <li><a href="./widget-twitter.html">Social</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dimmer" onClick='dimmer()' >
+        <main>        
+            <div class="container">
+                <div class="row">
+                    <div class="twelve columns">
+                        <div class="widget">
+                            <div class="twitter-widget">
+                                <div class="tweet-container"></div>      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </body>
+    <script>
+            window.onload = function() {
+                var tweets = [{
+                'Random Name': 'Clementine Halvorson',
+                'Random User Name': 'Teagan_Howe50',
+                'Random Avatar': './img/128.jpg',
+                'Random Tweet': '`Cliche meh hot chicken etsy normcore messenger bag plaid hashtag. Man braid freegan waistcoat pop-up typewriter, adaptogen shaman whatever plaid XOXO marfa copper mug. Blue bottle letterpress brunch'
+            },
+            {
+                'Random Name': 'Alphonso Kulas',
+                'Random User Name': 'Julien.Bernier',
+                'Random Avatar': './img/128 (1).jpg',
+                'Random Tweet': 'distillery wayfarers jean shorts XOXO vape. Try-hard kale chips franzen art party pinterest air plant.'
+            },
+            {
+                'Random Name': 'Darwin Kuhn',
+                'Random User Name': 'Merritt_Johns',
+                'Random Avatar': './img/128 (2).jpg',
+                'Random Tweet': 'Brunch yr kombucha heirloom quinoa, edison bulb ennui gastropub schlitz truffaut. Neutra gastropub humblebrag cray.'
+            },
+            {
+                'Random Name': 'Alessandra Kutch III',
+                'Random User Name': 'Mireille22',
+                'Random Avatar': './img/128 (3).jpg',
+                'Random Tweet': 'Schlitz hell of shabby chic bicycle rights jean shorts swag direct trade farm-to-table brunch vinyl portland af literally.'
+            },
+            {
+                'Random Name': 'Lillian Lueilwitz',
+                'Random User Name': 'Veda.Gottlieb26',
+                'Random Avatar': './img/128 (4).jpg',
+                'Random Tweet': 'Migas tacos semiotics photo booth 90\'s. Poutine pour-over cardigan mumblecore farm-to-table la croix hashtag cray beard truffaut next level.'
+            }];        
+        
+        
+            function fakeTweets() {    
+                var twitterFeed = document.querySelector('.tweet-container');
+                var tAttrArr = ['Random User Name', 'Random Avatar', 'Random Tweet'];
+                var main = document.querySelector('.widget');
+        
+                for(var j = 0; j < tweets.length; j ++) {
+                    var div = document.createElement('div');
+                    var dip = document.createElement('div');
+                    dip.className = 'tweetImg';
+                    div.className = 'tweetCont';
+                    twitterFeed.appendChild(div);
+        
+                    for(var i = 0; i < tAttrArr.length; i ++) {
+                        var img = document.createElement('img');
+                        var p = document.createElement('p');
+                        if( i == 0) {
+                            p.innerHTML = '@' + tweets[j][tAttrArr[i]];
+                            div.appendChild(p);
+        
+                        }
+                        else if( i === 1 ) {
+                            img.setAttribute('src', tweets[j][tAttrArr[i]]);
+                            //dip.appendChild(img);
+                            div.appendChild(img);
+        
+                        } else {                    
+                            p.innerHTML = tweets[j][tAttrArr[i]];
+                            div.appendChild(p);   
+                        }
+                    } 
+        
+                }
+            }
+            fakeTweets();
+        }
+        </script>
+    </html>
