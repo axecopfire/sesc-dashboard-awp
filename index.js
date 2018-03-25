@@ -1,7 +1,7 @@
 /*** Node Static ***/
 
 var static = require('node-static');
-var file = new static.Server();
+var file = new static.Server('/');
 
 require('http').createServer(function(request, response) {
   request.addListener('end', function() {
