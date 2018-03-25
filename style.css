@@ -36,6 +36,12 @@ a:hover {
   position: absolute;
   display: inline-block;
 }
+.burger-icon:hover {
+  cursor: pointer;
+}
+.burger-icon:hover span {
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+}
 .burger-icon span {
   background-color: #fff;
   width: 40px;
@@ -48,15 +54,20 @@ a:hover {
   display: block;
   position: absolute;
   height: 100vh;
-  width: 30%;
   z-index: 100;
   margin-left: -100%;
   background-color: #b8b8b8;
   transition: margin-left 0.5s ease;
+  text-align: center;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
 }
 .sidebar li:hover {
   background-color: #0274ff;
   border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+.sidebar li:hover a {
+  font-weight: bold;
 }
 .sidebar .sb-header {
   width: 100%;
@@ -82,21 +93,16 @@ a:hover {
 .sidebar.active {
   margin-left: 0;
 }
-@media (max-width: 500px) {
-  .sidebar {
-    width: 40%;
-  }
-}
 .dimmer {
-  z-index: 0;
+  z-index: 100;
 }
 .dimmer.active {
   z-index: 99;
   position: fixed;
-  background-color: #002859;
+  background-color: #004ead;
   width: 100vw;
   height: 100vh;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 /* Widgets */
 .bluf,
@@ -106,6 +112,7 @@ a:hover {
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
 }
 .bluf h2,
 .widget-contact h2 {
@@ -120,6 +127,7 @@ a:hover {
   background-color: #fff;
   border-radius: 5px;
   padding: 5px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
 }
 .twitter-widget {
   height: 75vh;
@@ -179,6 +187,7 @@ a:hover {
   background-color: #949494;
   text-align: center;
   padding: 20px;
+  margin-top: 200px;
 }
 .widget-colab img {
   width: 100%;

@@ -1,6 +1,7 @@
 color-primary-blue = rgba(0, 40, 89, 1)
 color-bg-black = lighten(black, 30%)
-    
+box-shadow-var = 0px 0px 20px 0px rgba(0,0,0,0.5)
+
 body
     background-image url('img/background-2.jpg')
     background-repeat no-repeat
@@ -21,16 +22,16 @@ a
     color inherit
     &:hover
         cursor pointer
-    
+
 
 .topHeader
     background-color color-primary-blue
     width 100%
 
-.logo 
+.logo
     img
         height: 100px
-    
+
 
 .burger-icon
     right 20px
@@ -38,6 +39,10 @@ a
     transform translateY(50%)
     position absolute
     display inline-block
+    &:hover
+        cursor pointer
+        span
+            box-shadow 0px 0px 20px 0px rgba(0,0,0,0.8)
     span
         background-color white
         width 40px
@@ -47,17 +52,22 @@ a
         display block
 
 .sidebar
-    display block 
+    display block
     position absolute
     height 100vh
-    width 30%
     z-index 100
     margin-left -100%
     background-color lighten(color-bg-black, 60%)
     transition margin-left 0.5s ease
+    text-align center
+    box-shadow 0px 0px 20px 0px rgba(0,0,0,0.5)
     li:hover
         background-color lighten(color-primary-blue, 40%)
         border-radius 5px
+        box-shadow 0px 0px 20px 0px rgba(0,0,0,0.5)
+        a
+            font-weight bold
+
     .sb-header
         width 100%
         background-color color-primary-blue
@@ -78,21 +88,18 @@ a
 
     &.active
         margin-left 0
-@media(max-width: 500px)
-    .sidebar
-        width 40%
-    
-    
+
+
 
 .dimmer
-    z-index 0
+    z-index 100
     &.active
         z-index 99
         position fixed
-        background-color color-primary-blue
+        background-color lighten(color-primary-blue, 20%)
         width 100vw
         height 100vh
-        opacity 0.9
+        opacity 0.8
 
 
 /* Widgets */
@@ -103,18 +110,20 @@ a
     border-radius 5px
     margin 20px
     padding 20px
+    box-shadow 0px 0px 20px 0px rgba(0,0,0,0.5)
     h2
         font-weight bold
         text-align center
-    p 
+    p
         font-size 24px
 
 .crisis
     background-color white
     border-radius 5px
     padding 5px
+    box-shadow 0px 0px 20px 0px rgba(0,0,0,0.5)
 
-.twitter-widget 
+.twitter-widget
     height 75vh
     overflow scroll
     width 100%
@@ -134,7 +143,7 @@ a
     background-color white
     padding 5px
     border-radius 5px
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    box-shadow 0px 0px 20px 0px rgba(0,0,0,0.5)
     img
         float left
         width 20%
@@ -143,7 +152,7 @@ a
     @media (min-width: 1000px)
         img
             float none
-        
+
 
     p:first-child
         display inline-block
@@ -161,15 +170,16 @@ a
     margin 40px
     form
         input
-            display block        
+            display block
     img
         width 100%
         border-radius 5px
-    
+
 .widget-contact
     background-color lighten(color-bg-black, 40%)
     text-align center
     padding 20px
+    margin-top 200px
 
 .widget-colab
     img
@@ -177,4 +187,3 @@ a
         margin 20px
         border-radius 5px
 
-    
