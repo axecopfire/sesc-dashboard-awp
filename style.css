@@ -77,6 +77,7 @@ a:hover {
 }
 .sidebar li a {
   color: #000;
+  display: block;
 }
 .sidebar.active {
   margin-left: 0;
