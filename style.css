@@ -1,5 +1,7 @@
 body {
-  background-color: #4d4d4d;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header {
   width: 100%;
@@ -14,6 +16,9 @@ p {
 }
 a {
   color: inherit;
+}
+a:hover {
+  cursor: pointer;
 }
 .topHeader {
   background-color: #002859;
@@ -72,9 +77,11 @@ a {
   z-index: 99;
   position: fixed;
   background-color: #002859;
-  opacity: 0.2;
   width: 100vw;
   height: 100vh;
+}
+.dimmer.active .dimmer {
+  opacity: 0.9;
 }
 /* Widgets */
 .bluf,
@@ -93,6 +100,11 @@ a {
 .bluf p,
 .widget-contact p {
   font-size: 24px;
+}
+.crisis {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 .twitter-widget {
   height: 100%;

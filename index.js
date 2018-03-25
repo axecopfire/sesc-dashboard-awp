@@ -10,6 +10,7 @@ window.onload = function () {
         var socialBtn = document.getElementById('twitter');
         var colabBtn = document.getElementById('colab');
         var contactBtn = document.getElementById('contact');
+        var employmentBtn = document.getElementById('employment');
 
         /*request.onreadystatechange = function() {
             if(request.readyState === 4) {
@@ -48,6 +49,9 @@ window.onload = function () {
         });
         contactBtn.addEventListener('click', function() {
             get('./widget-contact.html');
+        });
+        employmentBtn.addEventListener('click', function() {
+            get('./widget-employment.html');
         });
 
     }

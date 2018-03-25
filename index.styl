@@ -2,7 +2,9 @@ color-primary-blue = rgba(0, 40, 89, 1)
 color-bg-black = lighten(black, 30%)
     
 body
-    background-color color-bg-black
+    background-image url('img/background.jpg')
+    background-repeat no-repeat
+    background-size cover
 header
     width 100%
     display block
@@ -15,6 +17,8 @@ p
 
 a
     color inherit
+    &:hover
+        cursor pointer
     
 
 .topHeader
@@ -70,9 +74,10 @@ a
         z-index 99
         position fixed
         background-color color-primary-blue
-        opacity 0.2
         width 100vw
         height 100vh
+        .dimmer
+            opacity 0.9
 
 /* Widgets */
 
@@ -88,6 +93,10 @@ a
     p 
         font-size 24px
 
+.crisis
+    background-color white
+    border-radius 5px
+    padding 5px
 
 .twitter-widget 
     height 100%
