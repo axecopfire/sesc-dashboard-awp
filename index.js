@@ -11,6 +11,8 @@ window.onload = function () {
         var colabBtn = document.getElementById('colab');
         var contactBtn = document.getElementById('contact');
         var employmentBtn = document.getElementById('employment');
+        var sidebar = document.querySelector('.sidebar');
+        var dimmer = document.querySelector('.dimmer');
 
         /*request.onreadystatechange = function() {
             if(request.readyState === 4) {
@@ -43,15 +45,31 @@ window.onload = function () {
 
         socialBtn.addEventListener('click', function() {
             get('./widget-social.html');
+            var sidebar = document.querySelector('.sidebar');
+            var dimmer = document.querySelector('.dimmer');
+            sidebar.classList.toggle('active');
+            dimmer.classList.toggle('active');
         });
         colabBtn.addEventListener('click', function() {
             get('./widget-colab.html');
+            var sidebar = document.querySelector('.sidebar');
+            var dimmer = document.querySelector('.dimmer');
+            sidebar.classList.toggle('active');
+            dimmer.classList.toggle('active');
         });
         contactBtn.addEventListener('click', function() {
             get('./widget-contact.html');
+            var sidebar = document.querySelector('.sidebar');
+            var dimmer = document.querySelector('.dimmer');
+            sidebar.classList.toggle('active');
+            dimmer.classList.toggle('active');
         });
         employmentBtn.addEventListener('click', function() {
             get('./widget-employment.html');
+            var sidebar = document.querySelector('.sidebar');
+            var dimmer = document.querySelector('.dimmer');
+            sidebar.classList.toggle('active');
+            dimmer.classList.toggle('active');
         });
 
     }
